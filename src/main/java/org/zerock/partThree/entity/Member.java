@@ -14,7 +14,7 @@ import javax.persistence.Id;
 public class Member extends BaseEntity{
 
     @Id
-    private String emil;
+    private String email;
 
     private String password;
 

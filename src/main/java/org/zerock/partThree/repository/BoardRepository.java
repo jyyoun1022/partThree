@@ -22,7 +22,7 @@ public interface BoardRepository extends JpaRepository<Board,Long> {
             "left join b.member m " +
             "left join Reply r on r.board=b " +
             "group by b",
-    countQuery = "Select count(b) from Board b ")
+    countQuery = "select count(b) from Board b ")
     Page<Object[]> getBoardWithReplyCount(Pageable pageable);
 
     @Query("select b,m,count(r) from Board b " +

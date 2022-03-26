@@ -28,7 +28,7 @@ public class BoardRepositoryTests {
     void insertBoardDummies(){
 
         IntStream.rangeClosed(1,100).forEach(i->{
-            Member member = Member.builder().emil("jyyoun"+i+"@naver.com").build();
+            Member member = Member.builder().email("jyyoun"+i+"@naver.com").build();
 
             Board board = Board.builder()
                     .title("Title"+i)
@@ -80,5 +80,9 @@ public class BoardRepositoryTests {
         Object[] arr = (Object[]) result;
 
         System.out.println(Arrays.toString(arr));
+    }
+    @Test
+    void deleteBoard(){
+        boardRepository.deleteAll();
     }
 }

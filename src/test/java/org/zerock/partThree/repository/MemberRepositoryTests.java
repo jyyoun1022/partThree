@@ -19,7 +19,7 @@ public class MemberRepositoryTests {
     void insertMemberDummies(){
         IntStream.rangeClosed(1,100).forEach(i->{
             Member member = Member.builder()
-                    .emil("jyyoun"+i+"@naver.com")
+                    .email("jyyoun"+i+"@naver.com")
                     .password("1111")
                     .name("USER"+i)
                     .build();

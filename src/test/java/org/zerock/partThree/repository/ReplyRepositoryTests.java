@@ -41,4 +41,8 @@ public class ReplyRepositoryTests {
         System.out.println(reply);
         System.out.println(reply.getBoard());
     }
+    @Test
+    void deleteReply(){
+        repository.deleteAll();
+    }
 }
