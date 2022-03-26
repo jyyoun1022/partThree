@@ -22,4 +22,6 @@ public class Board extends BaseEntity{
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Member member;
+
 }
+
