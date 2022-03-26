@@ -7,6 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.zerock.partThree.entity.Board;
 import org.zerock.partThree.entity.Reply;
 
+import java.util.Optional;
 import java.util.stream.IntStream;
 
 @SpringBootTest
@@ -30,5 +31,14 @@ public class ReplyRepositoryTests {
 
             repository.save(reply);
         });
+    }
+    @Test
+    void readReply1(){
+        Optional<Reply> result = repository.findById(1L);
+
+        Reply reply = result.get();
+
+        System.out.println(reply);
+        System.out.println(reply.getBoard());
     }
 }
