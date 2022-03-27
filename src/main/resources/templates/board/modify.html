@@ -61,14 +61,14 @@
             });
 
             $(".listBtn").click(function(){
-<!--                var page = $("input[name='page']");-->
-<!--                var type = $("input[name='type']");-->
-<!--                var keyword = $("input[name='keyword']");-->
+                var page = $("input[name='page']");
+                var type = $("input[name='type']");
+                var keyword = $("input[name='keyword']");
 
-<!--                actionForm.empty();-->
-<!--                actionForm.append(page);-->
-<!--                actionForm.append(type);-->
-<!--                actionForm.append(keyword);-->
+                actionForm.empty();
+                actionForm.append(page);
+                actionForm.append(type);
+                actionForm.append(keyword);
 
                 actionForm.attr("action","/board/list").attr("method","get").submit();
             })
