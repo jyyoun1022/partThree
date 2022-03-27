@@ -39,7 +39,17 @@
         <a th:href="@{/board/list(page=${requestDTO.page},type=${requestDTO.type},keyword=${requestDTO.keyword})}">
             <button type="button" class="btn btn-info">List</button>
         </a>
+        <div>
+            <div class="mt-4">
+                <h5><span class="badge badge-secondary replyCount">
+                    ReplyCount - [[${dto.replyCount}]]
+                </span>
+            </h5>
+            <div class="list-group replyList">
 
+            </div>
+            </div>
+        </div>
     </th:block>
 </th:block>
 </html>

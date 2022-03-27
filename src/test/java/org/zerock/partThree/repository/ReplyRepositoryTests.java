@@ -7,6 +7,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.zerock.partThree.entity.Board;
 import org.zerock.partThree.entity.Reply;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
@@ -44,5 +46,14 @@ public class ReplyRepositoryTests {
     @Test
     void deleteReply(){
         repository.deleteAll();
+    }
+    @Test
+    void testListReply(){
+        List<Reply> result = repository.readReply(97L);
+
+        for (Reply arr : result) {
+            System.out.println(arr);
+        }
+
     }
 }
