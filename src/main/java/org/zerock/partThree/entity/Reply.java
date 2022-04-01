@@ -22,4 +22,11 @@ public class Reply extends BaseEntity{
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Board board;
+
+    public void changeText(String text){
+        this.text=text;
+    }
+    public void changeReplier(String replier){
+        this.replier=replier;
+    }
 }
