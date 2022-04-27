@@ -23,10 +23,12 @@ public class BoardController {
     public void list(@ModelAttribute("requestDTO")PageRequestDTO pageRequestDTO, Model model){
         model.addAttribute("result",boardService.getList(pageRequestDTO));
     }
+
     @GetMapping("/register")
     public void register(){
 
     }
+
     @PostMapping("/register")
     public String register(@ModelAttribute("dto")BoardDTO dto,
                            RedirectAttributes redirectAttributes
@@ -36,6 +38,7 @@ public class BoardController {
         redirectAttributes.addFlashAttribute("msg",bno);
         return "redirect:/board/list";
     }
+
     @GetMapping({"/read","/modify"})
     public void read(@ModelAttribute("requestDTO")PageRequestDTO requestDTO,
                      Model model,

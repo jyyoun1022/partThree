@@ -17,6 +17,8 @@ public class ReplyRepositoryTests {
     @Autowired
     private ReplyRepository repository;
 
+
+
     @Test
     @DisplayName("댓글더미데이터 생성")
     void insertReplyDummies(){
