@@ -23,6 +23,7 @@ public class BookStore {
     public void add(Book book){
         book.setBookStore(this);
 //        this.books.add(book);
+        book.getBookStore();
         getBooks().add(book);
     }
 }
